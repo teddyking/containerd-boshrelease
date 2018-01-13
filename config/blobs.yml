@@ -1,3 +1,7 @@
+containerd/containerd-1.0.0.linux-amd64.tar.gz:
+  size: 19509102
+  object_id: 04094fbd-0b49-4904-610b-dcb0188925c4
+  sha: 3da20c3358cae651b3fadf1de9a44938cae25b69
 golang/go1.9.2.linux-amd64.tar.gz:
   size: 104247844
   object_id: cf3aea7a-5bfc-4c79-5c67-3e39b5b36fe3
