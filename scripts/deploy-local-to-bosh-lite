@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+bosh -n \
+  update-cloud-config manifests/iaas/bosh-lite/cloud-config.yml
+
+bosh -n \
+  -d containerd \
+  deploy --no-redact \
+  -o manifests/ops/use-local-containerd.ops.yml \
+  manifests/containerd.yml "$@"

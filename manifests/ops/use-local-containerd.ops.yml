@@ -1,0 +1,7 @@
+---
+- type: replace
+  path: /releases/name=containerd
+  value:
+    name: containerd
+    version: create
+    url: file://.

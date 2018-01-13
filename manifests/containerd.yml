@@ -1,0 +1,30 @@
+---
+name: containerd
+
+releases:
+- name: containerd
+  version: latest
+
+stemcells:
+- alias: ubuntu-trusty-latest
+  os: ubuntu-trusty
+  version: latest
+
+instance_groups:
+- name: containerd
+  azs:
+  - z1
+  instances: 1
+  vm_type: default
+  stemcell: ubuntu-trusty-latest
+  networks:
+  - name: default
+  jobs:
+  - name: containerd
+    release: containerd
+
+update:
+  canaries: 1
+  max_in_flight: 5
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
