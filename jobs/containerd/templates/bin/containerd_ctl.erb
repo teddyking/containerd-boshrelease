@@ -5,13 +5,15 @@ set -e
 JOB_NAME=containerd
 RUN_DIR=/var/vcap/sys/run/$JOB_NAME
 LOG_DIR=/var/vcap/sys/log/$JOB_NAME
+DATA_DIR=/var/vcap/data/$JOB_NAME
+STATE_DIR=/var/vcap/store/$JOB_NAME
 PID_FILEPATH=$RUN_DIR/$JOB_NAME.pid
 CONFIG_FILEPATH=/var/vcap/jobs/$JOB_NAME/config/config.toml
 
 export PATH=$PATH:/var/vcap/packages/containerd/bin
 
 create_dirs() {
-  mkdir -p $RUN_DIR $LOG_DIR
+  mkdir -p $RUN_DIR $LOG_DIR $DATA_DIR $STATE_DIR
 }
 
 write_pidfile() {
