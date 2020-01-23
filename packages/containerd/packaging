@@ -2,5 +2,5 @@
 
 set -e
 
-tar xzf containerd/containerd-1.0.0.linux-amd64.tar.gz
+tar xzf containerd/containerd.linux-amd64.tar.gz
 cp -R bin "${BOSH_INSTALL_TARGET}"
