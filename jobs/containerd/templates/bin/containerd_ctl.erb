@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+echo containerd
 JOB_NAME=containerd
 RUN_DIR=/var/vcap/sys/run/$JOB_NAME
 LOG_DIR=/var/vcap/sys/log/$JOB_NAME
@@ -11,6 +11,10 @@ PID_FILEPATH=$RUN_DIR/$JOB_NAME.pid
 CONFIG_FILEPATH=/var/vcap/jobs/$JOB_NAME/config/config.toml
 
 export PATH=$PATH:/var/vcap/packages/containerd/bin
+
+export http_proxy=<%= p('proxy.http') %>
+export https_proxy=<%= p('proxy.https') %>
+export no_proxy=<%= p('proxy.noproxy') %>
 
 create_dirs() {
   mkdir -p $RUN_DIR $LOG_DIR $DATA_DIR $STATE_DIR
