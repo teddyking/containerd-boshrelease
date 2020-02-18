@@ -1,2 +1,2 @@
 export PATH=$PATH:/var/vcap/packages/containerd/bin
-ctr -n=k8s.io images import /var/vcap/packages/containerd/pause.tar
+ctr -n=k8s.io --address=/var/vcap/sys/run/containerd/containerd.sock images import /var/vcap/packages/containerd/pause.tar
