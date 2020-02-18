@@ -5,3 +5,4 @@ set -e
 tar xzf containerd/containerd.linux-amd64.tar.gz
 cp -R ./usr/local/bin "${BOSH_INSTALL_TARGET}"
 cp -R ./usr/local/sbin/runc "${BOSH_INSTALL_TARGET}/bin/runc"
+cp /containerd/pause.tar "${BOSH_INSTALL_TARGET}/pause.tar"
