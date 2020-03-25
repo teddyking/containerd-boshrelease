@@ -1,8 +1,8 @@
 ---
-name: containerd
-
 blobstore:
   provider: s3
   options:
     bucket_name: containerd-blobs
     region: eu-west-2
+final_name: containerd 
+

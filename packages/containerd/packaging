@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 set -e
+# untar release
+tar xzf containerd/containerd.linux-amd64.tar.gz
+cp -R ./usr/local/bin "${BOSH_INSTALL_TARGET}"
+cp -R ./usr/local/sbin/runc "${BOSH_INSTALL_TARGET}/bin/runc"
 
-tar xzf containerd/containerd-1.0.0.linux-amd64.tar.gz
-cp -R bin "${BOSH_INSTALL_TARGET}"

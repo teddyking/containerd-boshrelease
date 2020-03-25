@@ -1,4 +1,3 @@
-containerd/containerd-1.0.0.linux-amd64.tar.gz:
-  size: 19509102
-  object_id: 04094fbd-0b49-4904-610b-dcb0188925c4
-  sha: 3da20c3358cae651b3fadf1de9a44938cae25b69
+/containerd/containerd.linux-amd64.tar.gz:
+  size: 71820818
+  sha: sha256:24ce7ad6b489fb25d07d2a3bb50e443fcce1ac3318f8cc0831e00668c2c9fd86
