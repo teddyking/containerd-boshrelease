@@ -3,4 +3,4 @@ name: containerd
 
 files:
 - containerd/containerd.linux-amd64.tar.gz
-- containerd/pause.tar
+
